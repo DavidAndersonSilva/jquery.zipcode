@@ -1,11 +1,9 @@
-====
-Information
-===
+**Information**
+
 Consulta CEP através do webservice da empresa Aviso Brasil.
 
-===
-How To Use
-===
+**How To Use**
+
 ```
 jQuery("#txtCep").zipcode({
 	data: {
