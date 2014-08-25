@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Zip Code</title>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+		* {
+			font-size: 12px;
+			font-family: Arial;
+		}
+		label {
+			width: 100px;
+			display: inline-block;
+		}
+
+		input {
+			border: 1px solid #CCCCCC;
+			padding: 2px;
+		}
+	</style>
+</head>
+<body>
+
+	<form>
+		<label for="txtCep">CEP</label>
+		<input type="text" name="txtCep" id="txtCep" size="10" maxlength="8" value="" autofocus="autofocus" />
+		<br />
+		<label for="txtLog">Logradouro</label>
+		<input type="text" name="txtLog" id="txtLog" size="30" value="" />
+		<br />
+		<label for="txtNum">Número</label>
+		<input type="text" name="txtNum" id="txtNum" size="10" maxlength="10" value="" />
+		<br />
+		<label for="txtCompl">Complemento</label>
+		<input type="text" name="txtCompl" id="txtCompl" size="10" maxlength="10" value="" />
+		<br />
+		<label for="txtDistrict">Bairro</label>
+		<input type="text" name="txtDistrict" id="txtDistrict" size="30" value="" />
+		<br />
+		<label for="txtCity">Cidade</label>
+		<input type="text" name="txtCity" id="txtCity" value="" />
+		<br />
+		<label for="txtUf">UF</label>
+		<input type="text" name="txtUf" id="txtUf" size="2" maxlength="2" value="" />
+		<br />
+	</form>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="jquery.zipcode.js"></script>
+<script type="text/javascript">
+	jQuery("#txtCep").zipcode({
+		data: {
+			uf: jQuery("#txtUf"), 
+			city: jQuery("#txtCity"), 
+            log: jQuery("#txtLog"), 
+            district: jQuery("#txtDistrict")
+		}, 
+		autofocus: jQuery("#txtNum")
+	});
+</script>
+</body>
+</html>
